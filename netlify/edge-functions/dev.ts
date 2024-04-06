@@ -1,6 +1,6 @@
 import type { Config, Context } from "@netlify/edge-functions";
 
-export default (context: Context) => {
+export default (context: Context & { headers: Headers }) => {
     console.log(context);
 
     return new Response(JSON.stringify({
